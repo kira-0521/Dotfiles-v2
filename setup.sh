@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ "$(uname)" != "Darwin" ] ; then
 	echo "Not macOS!"
 	exit 1
@@ -22,6 +21,9 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew update --verbose
 
 echo "brew upgradeを実行します..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew upgrade --verbose
+
+echo "rosettaをインストールします..."
+sudo softwareupdate --install-rosetta
 
 echo ".Brewfileで管理しているアプリケーションをインストールします..."
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile --verbose
@@ -63,3 +65,8 @@ for file in "${DOT_FILES[@]}"; do
 done
 
 exec $SHELL -l
+
+#------------------------------------------
+# macos
+#------------------------------------------
+./macos/setup.sh
