@@ -1,5 +1,5 @@
 [user]
-	name = kiratanaka
+	name = kira-0521
 	email = kiratanaka0521@gmail.com
 
 [alias]
@@ -10,3 +10,4 @@
         pr = pull
         mr = merge
         fh = fetch
+        sw = switch

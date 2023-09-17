@@ -1,0 +1,28 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+brew "curl"
+brew "git"
+brew "bat"
+brew "exa"
+brew "tree"
+brew "starship"
+brew "python"
+brew "pipenv"
+brew "pyenv"
+brew "mysql@8.0", restart_service: true
+
+cask "visual-studio-code"
+cask "alt-tab"
+cask "raycast"
+cask "slack"
+cask "postman"
+cask "firefox"
+cask "microsoft-edge"
+cask "warp"
+cask "arc"

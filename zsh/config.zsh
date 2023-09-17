@@ -36,6 +36,21 @@ alias dc-l="docker-compose logs"
 alias dc-il="docker-compose image list"
 alias dc-ir="docker-compose image rm"
 
+# git
+alias br='git branch'
+alias co='git checkout'
+alias cob='git checkout -b'
+alias ci='git commit'
+alias pull='git pull'
+alias push='git push'
+alias log='git log'
+alias st='git status'
+alias mr='git merge'
+alias fe='git fetch'
+alias swc='git switch -C'
+
+# shell
+alias cat='bat'
 
 #################################  HISTORY  #################################
 # history

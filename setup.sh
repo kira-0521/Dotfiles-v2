@@ -26,7 +26,7 @@ which brew >/dev/null 2>&1 && brew cleanup --verbose
 
 
 #------------------------------------------
-# volta
+# volta & node & npm & yarn & pnpm & bun
 #------------------------------------------
 echo "voltaをインストールしています..."
 /bin/bash -c "$(curl -fsSL https://get.volta.sh)"
@@ -34,6 +34,17 @@ echo "voltaをインストールしています..."
 echo "voltaよりnodeをインストールしています..."
 volta install node
 
+echo "voltaよりnpmをインストールしています..."
+volta install npm
+
+echo "voltaよりyarnをインストールしています..."
+volta install yarn
+
+echo "voltaよりpnpmをインストールしています..."
+volta install pnpm
+
+echo "bunをインストールしています..."
+curl -fsSL https://bun.sh/install | bash
 
 #------------------------------------------
 # シンボリックリンク
@@ -41,8 +52,7 @@ volta install node
 # 配置したい設定ファイル
 DOT_FILES=(.zshrc, .gitconfig)
 
-# .zshrc という設定ファイルのシンボリックリンクを
-# ホームディレクトリ直下に作成する
+# .zshrc という設定ファイルのシンボリックリンクをホームディレクトリ直下に作成する
 for file in "${DOT_FILES[@]}"; do
         ln -svf $file ~/
 done
