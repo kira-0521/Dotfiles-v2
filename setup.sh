@@ -34,7 +34,7 @@ which brew >/dev/null 2>&1 && brew cleanup --verbose
 # volta & node & npm & yarn & pnpm & bun
 #------------------------------------------
 echo "voltaをインストールしています..."
-/bin/bash -c "$(curl -fsSL https://get.volta.sh)"
+curl https://get.volta.sh | bash
 
 echo "voltaよりnodeをインストールしています..."
 volta install node
