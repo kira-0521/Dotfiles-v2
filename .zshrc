@@ -1,5 +1,5 @@
 # Dotfile
-SCRIPT_DIR=$HOME/Dotfiles
+SCRIPT_DIR=$HOME/Dotfiles-v2
 
 # zsh
 source $SCRIPT_DIR/zsh/plugins.zsh
